@@ -2,18 +2,18 @@ import fs from "fs";
 import { task } from "hardhat/config";
 
 task("deploy-ci", "Deploy contracts (automated by CI)")
-  .addOptionalParam("noundersdao", "The nounders DAO contract address")
+  .addOptionalParam("mythsdao", "The nounders DAO contract address")
   .addOptionalParam(
     "weth",
     "The WETH contract address",
     //TODO:REPLACE
     "0xc778417e063141139fce010982780140aa0cd5ab"
   )
-  .setAction(async ({ noundersdao, weth }, { ethers, run }) => {
+  .setAction(async ({ mythsdao, weth }, { ethers, run }) => {
     const [deployer] = await ethers.getSigners();
     const contracts = await run("deploy", {
       weth,
-      noundersDAO: noundersdao || deployer.address,
+      mythsDAO: mythsdao || deployer.address,
     });
 
     if (!fs.existsSync("logs")) {
