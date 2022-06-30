@@ -1,12 +1,19 @@
 {
-  "compilerOptions": {
-    "target": "es2018",
-    "module": "commonjs",
-    "strict": true,
-    "esModuleInterop": true,
-    "outDir": "dist",
-    "declaration": true
-  },
-  "include": ["./scripts", "./test", "./typechain"],
+  "extends": "./tsconfig.base.json",
+  "include": [
+    "utils.ts",
+    "./tasks",
+    "./src",
+    "./test",
+    "./typechain",
+    "./abi/**/*.json",
+    "./files/*.json"
+  ],
+  "exclude": ["./test/foundry/**"],
   "files": ["./hardhat.config.ts"]
+  // "references": [
+  //   {
+  //     "path": "../myths-assets/tsconfig.build.json"
+  //   }
+  // ]
 }

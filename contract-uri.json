@@ -1,0 +1,8 @@
+{
+  "name": "Myths",
+  "description": "One Myth, every day, forever.\r\n\r\nmythsdao.org",
+  "image": "ipfs://QmNdUibRHNqX2byJLtCD3ofn65cfCtvXdQnV87wRjqWf96",
+  "external_link": "https://mythsdao.org",
+  "seller_fee_basis_points": 0,
+  "fee_recipient": "0x0000000000000000000000000000000000000000"
+}
